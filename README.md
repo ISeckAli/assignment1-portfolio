@@ -1,6 +1,6 @@
 # Ivan Seck Ali — Software Engineering Portfolio
 
-A responsive personal portfolio built with React and Vite to showcase my software engineering background, technical skills, education, and selected software development and artificial intelligence projects.
+A responsive personal portfolio built with React and Vite to showcase my software engineering background, technical skills, education, professional qualifications, and selected software development and artificial intelligence projects.
 
 ## Portfolio Overview
 
@@ -12,18 +12,18 @@ This portfolio presents my work across:
 - Artificial Intelligence
 - Machine Learning
 
-The site was designed as a modern, responsive single-page React application with routed portfolio sections, interactive project case studies, professional contact information, and a downloadable résumé.
+The site was designed as a modern, responsive single-page React application with routed portfolio sections, interactive project case studies, professional contact information, a downloadable résumé, and responsive layouts for desktop, tablet, and mobile devices.
 
 ## Pages
 
 The portfolio includes six main views:
 
-- **Home** — introduction and professional focus
-- **About** — background, technical interests, and résumé
-- **Projects** — selected software engineering and AI projects
-- **Education** — academic background and technical development
-- **Services** — engineering capabilities and technologies
-- **Contact** — professional contact information and contact form
+- **Home** — welcome message, professional focus, mission statement, and portfolio navigation
+- **About** — background, technical interests, profile image, and downloadable résumé
+- **Projects** — selected software engineering and AI projects with images, descriptions, roles, outcomes, and project links
+- **Education** — academic background, current technical development, advanced areas of study, and professional certifications
+- **Services** — engineering capabilities, technologies, development workflow, and visual examples of completed project work
+- **Contact** — professional contact information and interactive contact form
 
 ## Featured Projects
 
@@ -137,14 +137,20 @@ https://github.com/ISeckAli/miniredis
 - Responsive desktop, tablet, and mobile layouts
 - React Router navigation
 - Custom portfolio branding and logo
+- Welcome message and professional mission statement
 - Downloadable résumé
 - Interactive project case-study modals
+- Project images and visual work examples
 - External project, demo, API, and repository links
 - Education and technical-development sections
+- Professional certifications and qualifications
 - Services and engineering-capabilities section
+- Visual project examples supporting offered services
 - Contact form with required-field validation
 - Contact confirmation and homepage redirect
 - SPA route handling for deployed routes
+- Internal code documentation and contextual variable naming
+- Production deployment through Netlify
 
 ## Running the Project Locally
 
@@ -152,60 +158,3 @@ https://github.com/ISeckAli/miniredis
 
 ```bash
 git clone https://github.com/ISeckAli/assignment1-portfolio.git
-```
-
-### 2. Navigate to the project
-
-```bash
-cd assignment1-portfolio
-```
-
-### 3. Install dependencies
-
-```bash
-npm install
-```
-
-### 4. Start the development server
-
-```bash
-npm run dev
-```
-
-Vite will provide the local development address, normally:
-
-```text
-http://localhost:5173/
-```
-
-## Production Build
-
-Create a production build with:
-
-```bash
-npm run build
-```
-
-The optimized production files are generated in the `dist` directory.
-
-## Live Portfolio
-
-https://storied-cascaron-3a3158.netlify.app
-
-## Repository
-
-https://github.com/ISeckAli/assignment1-portfolio
-
-## Author
-
-**Ivan Seck Ali**
-
-Software Engineering | Full-Stack Development | Artificial Intelligence
-
-- LinkedIn: https://www.linkedin.com/in/ivanseckali
-- GitHub: https://github.com/ISeckAli
-- Email: ivan.seckali@outlook.com
-
-## Academic Project
-
-Developed for **COMP 229 — Web Application Development** at Centennial College.
