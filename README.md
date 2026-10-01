@@ -190,7 +190,7 @@ The optimized production files are generated in the `dist` directory.
 
 ## Live Portfolio
 
-The deployed portfolio link will be added here after deployment.
+https://storied-cascaron-3a3158.netlify.app
 
 ## Repository
 
