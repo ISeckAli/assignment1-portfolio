@@ -1,8 +1,288 @@
+const completedCourses = [
+  'Programming 1',
+  'Programming 2',
+  'Software Engineering Fundamentals',
+  'Introduction to Database Concepts',
+  'Web Interface Design',
+  'Client-Side Web Development',
+  'Software Requirements Engineering',
+  'Unix / Linux Operating Systems',
+  'Functions & Number Systems',
+  'Discrete Mathematics & Introductory Calculus',
+]
+
+const currentCourses = [
+  'Java Programming',
+  'Web Application Development',
+  'Introduction to Artificial Intelligence',
+  'Artificial Intelligence Systems Design',
+  'Linear Algebra & Statistics',
+]
+
+const futureFocus = [
+  {
+    number: '01',
+    title: 'Algorithms & Advanced Data Systems',
+    description:
+      'Data structures and algorithms, advanced database programming, NoSQL systems, vector data, scalable storage, and intelligent data architectures.',
+  },
+  {
+    number: '02',
+    title: 'Machine Learning & Deep Learning',
+    description:
+      'Supervised learning, neural networks, deep learning, transformers, representation learning, and advanced model development.',
+  },
+  {
+    number: '03',
+    title: 'MLOps & Cloud AI',
+    description:
+      'AI software testing, production pipelines, lifecycle management, cloud machine learning, automation, monitoring, and deployment.',
+  },
+  {
+    number: '04',
+    title: 'Intelligent Systems',
+    description:
+      'Natural language processing, recommender systems, reinforcement learning, intelligent robotics, and AI-enabled mobile applications.',
+  },
+  {
+    number: '05',
+    title: 'Responsible AI Engineering',
+    description:
+      'AI ethics, data governance, security, privacy, explainability, professional standards, and responsible system design.',
+  },
+  {
+    number: '06',
+    title: 'Applied AI Capstone',
+    description:
+      'Researching, designing, developing, and integrating an AI capability into a complete software solution addressing a real-world problem.',
+  },
+]
+
 function Education() {
   return (
-    <div>
-      <h1>Education</h1>
-    </div>
+    <main>
+      <section className="education-section">
+        <div className="education-container">
+          <div className="education-heading">
+            <p className="education-label">
+              EDUCATION & TECHNICAL DEVELOPMENT
+            </p>
+
+            <h1>Education</h1>
+
+            <p>
+              Building a broad software engineering foundation while
+              specializing in artificial intelligence, machine learning, and
+              intelligent software systems.
+            </p>
+          </div>
+
+          <section className="degree-showcase">
+            <div className="degree-main">
+              <div className="degree-status">
+                <span className="education-status-dot"></span>
+                IN PROGRESS
+              </div>
+
+              <p className="degree-institution">
+                CENTENNIAL COLLEGE
+              </p>
+
+              <h2>
+                Software Engineering Technology
+                <span>Artificial Intelligence</span>
+              </h2>
+
+              <p className="degree-credential">
+                Ontario College Advanced Diploma • Co-op
+
+                <span
+                  style={{
+                    display: 'block',
+                    marginTop: '6px',
+                  }}
+                >
+                  January 2026 – April 2028 (Expected)
+                </span>
+              </p>
+
+              <p className="degree-description">
+                A software engineering program combining programming,
+                full-stack development, databases, systems engineering,
+                mathematics, machine learning, artificial intelligence, and
+                production-oriented software practices.
+              </p>
+
+              <div className="degree-tags">
+                <span>Software Engineering</span>
+                <span>Full-Stack Development</span>
+                <span>Artificial Intelligence</span>
+                <span>Machine Learning</span>
+                <span>Co-op</span>
+              </div>
+            </div>
+
+            <div className="education-metrics">
+              <div className="education-metric">
+                <span className="metric-label">
+                  CUMULATIVE GPA
+                </span>
+
+                <strong>4.287</strong>
+
+                <p>
+                  Strong academic performance across completed studies.
+                </p>
+              </div>
+
+              <div className="education-metric">
+                <span className="metric-label">
+                  CREDITS COMPLETED
+                </span>
+
+                <strong>47</strong>
+
+                <p>
+                  Completed before the current academic term.
+                </p>
+              </div>
+
+              <div className="education-metric">
+                <span className="metric-label">
+                  STUDY FORMAT
+                </span>
+
+                <strong>Year-Round</strong>
+
+                <p>
+                  Continuous study through available summer terms rather than
+                  following a traditional two-term academic year.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section className="education-block">
+            <div className="education-block-heading">
+              <div>
+                <p className="education-section-number">
+                  01
+                </p>
+
+                <h2>Technical Foundation</h2>
+              </div>
+
+              <p>
+                Completed coursework covering the foundations of software
+                engineering, programming, web development, databases, systems,
+                requirements engineering, and applied mathematics.
+              </p>
+            </div>
+
+            <div className="course-chip-grid">
+              {completedCourses.map((course) => (
+                <div
+                  className="course-chip completed-course"
+                  key={course}
+                >
+                  <span className="course-status-icon">
+                    ✓
+                  </span>
+
+                  <span>{course}</span>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section className="education-block current-education-block">
+            <div className="education-block-heading">
+              <div>
+                <p className="education-section-number">
+                  02
+                </p>
+
+                <h2>Current Technical Focus</h2>
+              </div>
+
+              <p>
+                Current studies deepen the connection between software
+                development, application architecture, artificial intelligence,
+                and the mathematics behind intelligent systems.
+              </p>
+            </div>
+
+            <div className="current-course-grid">
+              {currentCourses.map((course) => (
+                <div
+                  className="current-course-card"
+                  key={course}
+                >
+                  <div className="current-course-top">
+                    <span>ACTIVE</span>
+                    <span className="active-course-dot"></span>
+                  </div>
+
+                  <h3>{course}</h3>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section className="education-block">
+            <div
+              className="education-block-heading"
+              style={{ gridTemplateColumns: '1fr' }}
+            >
+              <div>
+                <p className="education-section-number">
+                  03
+                </p>
+
+                <h2>Advanced Technical Direction</h2>
+              </div>
+            </div>
+
+            <div className="future-focus-grid">
+              {futureFocus.map((focus) => (
+                <article
+                  className="future-focus-card"
+                  key={focus.title}
+                >
+                  <span className="future-focus-number">
+                    {focus.number}
+                  </span>
+
+                  <h3>{focus.title}</h3>
+
+                  <p>{focus.description}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="coop-showcase">
+            <div className="coop-icon">
+              <span>CO-OP</span>
+            </div>
+
+            <div className="coop-content">
+              <p className="education-label">
+                PROFESSIONAL EXPERIENCE PATHWAY
+              </p>
+
+              <h2>Integrated Co-op Experience</h2>
+
+              <p>
+                The co-op stream includes three work-placement terms integrated
+                into the diploma, creating opportunities to apply software
+                engineering and AI skills in professional environments.
+              </p>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
   )
 }
 
