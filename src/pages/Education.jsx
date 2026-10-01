@@ -61,6 +61,42 @@ const futureFocus = [
   },
 ]
 
+// Professional certifications complementing the academic program.
+const certifications = [
+  {
+    title: 'Fundamentals of AI',
+    issuer: 'IBM',
+  },
+  {
+    title: 'Python 101 for Data Science',
+    issuer: 'IBM',
+  },
+  {
+    title: 'SQL & Relational Databases 101',
+    issuer: 'IBM',
+  },
+  {
+    title: 'Big Data 101',
+    issuer: 'IBM',
+  },
+  {
+    title: 'Accessing Hadoop Data Using Hive',
+    issuer: 'IBM',
+  },
+  {
+    title: 'Prompt Engineering for Everyone',
+    issuer: 'IBM',
+  },
+  {
+    title: 'Google Analytics Certification',
+    issuer: 'Google',
+  },
+  {
+    title: 'HubSpot Reporting Certification',
+    issuer: 'HubSpot',
+  },
+]
+
 function Education() {
   return (
     <main>
@@ -266,6 +302,42 @@ function Education() {
                   <h3>{focus.title}</h3>
 
                   <p>{focus.description}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          {/* Professional certifications included as additional qualifications. */}
+          <section className="education-block">
+            <div className="education-block-heading">
+              <div>
+                <p className="education-section-number">
+                  04
+                </p>
+
+                <h2>Professional Certifications</h2>
+              </div>
+
+              <p>
+                Additional professional qualifications supporting my work
+                across artificial intelligence, data, analytics, databases,
+                and software development.
+              </p>
+            </div>
+
+            <div className="future-focus-grid">
+              {certifications.map((certification, index) => (
+                <article
+                  className="future-focus-card"
+                  key={certification.title}
+                >
+                  <span className="future-focus-number">
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
+
+                  <h3>{certification.title}</h3>
+
+                  <p>{certification.issuer}</p>
                 </article>
               ))}
             </div>

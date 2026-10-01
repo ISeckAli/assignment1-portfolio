@@ -8,7 +8,7 @@ function Home() {
           {/* Main introduction and primary calls to action. */}
           <div className="hero-copy">
             <p className="hero-label">
-              SOFTWARE ENGINEERING • FULL STACK • AI
+              WELCOME TO MY PORTFOLIO • SOFTWARE ENGINEERING • FULL STACK • AI
             </p>
 
             <h1>
@@ -21,6 +21,17 @@ function Home() {
               student focused on building reliable software, full-stack
               applications, and practical machine learning and AI solutions.
             </p>
+
+            {/* Mission statement defines the purpose behind my engineering work. */}
+            <div className="mission-statement">
+              <span>MISSION</span>
+
+              <p>
+                My mission is to build reliable, maintainable software that
+                combines strong engineering practices with practical AI to solve
+                real problems and create useful products.
+              </p>
+            </div>
 
             <div className="hero-actions">
               <Link to="/projects" className="primary-button">

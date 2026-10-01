@@ -1,3 +1,35 @@
+import pyquestImage from '../assets/pyquest.png'
+import fraudImage from '../assets/fraud-detection.png'
+import miniRedisImage from '../assets/miniredis.png'
+
+// Real project examples used to visually support the services offered.
+const serviceVisuals = [
+  {
+    image: pyquestImage,
+    alt: 'PyQuest full-stack Python learning platform',
+    label: 'FULL-STACK + AI',
+    title: 'Application Engineering',
+    description:
+      'A deployed full-stack learning platform combining application architecture, browser-based development tools, databases, testing, and AI integration.',
+  },
+  {
+    image: fraudImage,
+    alt: 'Fraud Detection machine learning application',
+    label: 'MACHINE LEARNING',
+    title: 'Intelligent Systems',
+    description:
+      'An end-to-end machine learning system covering data analysis, model development, explainability, API integration, testing, and deployment.',
+  },
+  {
+    image: miniRedisImage,
+    alt: 'MiniRedis Java backend system',
+    label: 'BACKEND + SYSTEMS',
+    title: 'Systems Engineering',
+    description:
+      'A Java client-server system demonstrating networking, concurrency, caching, persistence, automated testing, and performance benchmarking.',
+  },
+]
+
 // Service data used to generate each engineering capability card.
 const services = [
   {
@@ -149,6 +181,35 @@ function Services() {
               integrating data, developing machine learning systems, and
               connecting AI capabilities to real applications.
             </p>
+          </section>
+
+          {/* Real project screenshots demonstrate the services in practice. */}
+          <section
+            className="services-visual-grid"
+            aria-label="Examples of engineering work"
+          >
+            {serviceVisuals.map((visual) => (
+              <article
+                className="service-visual-card"
+                key={visual.title}
+              >
+                <img
+                  src={visual.image}
+                  alt={visual.alt}
+                  className="service-visual-image"
+                />
+
+                <div className="service-visual-content">
+                  <span className="service-visual-label">
+                    {visual.label}
+                  </span>
+
+                  <strong>{visual.title}</strong>
+
+                  <p>{visual.description}</p>
+                </div>
+              </article>
+            ))}
           </section>
 
           {/* Generate each service card from the shared services data. */}
