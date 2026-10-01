@@ -1,3 +1,4 @@
+// Completed technical coursework shown in the foundation section.
 const completedCourses = [
   'Programming 1',
   'Programming 2',
@@ -11,6 +12,7 @@ const completedCourses = [
   'Discrete Mathematics & Introductory Calculus',
 ]
 
+// Courses currently in progress.
 const currentCourses = [
   'Java Programming',
   'Web Application Development',
@@ -19,6 +21,7 @@ const currentCourses = [
   'Linear Algebra & Statistics',
 ]
 
+// Future technical areas grouped by focus instead of semester sequence.
 const futureFocus = [
   {
     number: '01',
@@ -63,6 +66,7 @@ function Education() {
     <main>
       <section className="education-section">
         <div className="education-container">
+          {/* Page heading and academic focus. */}
           <div className="education-heading">
             <p className="education-label">
               EDUCATION & TECHNICAL DEVELOPMENT
@@ -77,6 +81,7 @@ function Education() {
             </p>
           </div>
 
+          {/* Main credential, program status, and academic progress. */}
           <section className="degree-showcase">
             <div className="degree-main">
               <div className="degree-status">
@@ -113,6 +118,7 @@ function Education() {
                 production-oriented software practices.
               </p>
 
+              {/* High-level areas represented throughout the program. */}
               <div className="degree-tags">
                 <span>Software Engineering</span>
                 <span>Full-Stack Development</span>
@@ -122,6 +128,7 @@ function Education() {
               </div>
             </div>
 
+            {/* Academic metrics provide a quick summary of current progress. */}
             <div className="education-metrics">
               <div className="education-metric">
                 <span className="metric-label">
@@ -162,6 +169,7 @@ function Education() {
             </div>
           </section>
 
+          {/* Completed coursework covering the technical foundation of the program. */}
           <section className="education-block">
             <div className="education-block-heading">
               <div>
@@ -195,6 +203,7 @@ function Education() {
             </div>
           </section>
 
+          {/* Active courses for the current academic term. */}
           <section className="education-block current-education-block">
             <div className="education-block-heading">
               <div>
@@ -229,6 +238,7 @@ function Education() {
             </div>
           </section>
 
+          {/* Advanced areas the program develops toward later in the diploma. */}
           <section className="education-block">
             <div
               className="education-block-heading"
@@ -261,6 +271,7 @@ function Education() {
             </div>
           </section>
 
+          {/* Co-op pathway connects academic learning with professional experience. */}
           <section className="coop-showcase">
             <div className="coop-icon">
               <span>CO-OP</span>

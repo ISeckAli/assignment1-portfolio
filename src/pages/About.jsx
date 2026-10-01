@@ -5,7 +5,7 @@ function About() {
     <main>
       <section className="about-section">
         <div className="about-grid">
-
+          {/* Profile image and professional identity. */}
           <div className="about-profile">
             <img
               src={profileImage}
@@ -28,6 +28,7 @@ function About() {
             </div>
           </div>
 
+          {/* Background, technical interests, and professional direction. */}
           <div className="about-content">
             <h2>
               Building practical software with a focus on intelligent systems.
@@ -53,6 +54,7 @@ function About() {
               engineering, full-stack development, and AI-focused roles.
             </p>
 
+            {/* Key areas of technical development and specialization. */}
             <div className="about-highlights">
               <div className="highlight-item">
                 <span>01</span>
@@ -94,6 +96,7 @@ function About() {
               </div>
             </div>
 
+            {/* Opens the portfolio résumé stored in the public directory. */}
             <a
               href="/resume.pdf"
               target="_blank"
@@ -103,7 +106,6 @@ function About() {
               View My Résumé
             </a>
           </div>
-
         </div>
       </section>
     </main>

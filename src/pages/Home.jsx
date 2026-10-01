@@ -5,6 +5,7 @@ function Home() {
     <main>
       <section className="home-section">
         <div className="home-content">
+          {/* Main introduction and primary calls to action. */}
           <div className="hero-copy">
             <p className="hero-label">
               SOFTWARE ENGINEERING • FULL STACK • AI
@@ -32,6 +33,7 @@ function Home() {
             </div>
           </div>
 
+          {/* Technical summary panel highlighting core engineering focus areas. */}
           <div className="tech-panel">
             <div className="tech-panel-header">
               <div className="window-controls">
@@ -66,6 +68,7 @@ function Home() {
 
               <div className="system-row">
                 <span>Current Mode</span>
+
                 <strong className="status-active">
                   <span className="status-dot"></span>
                   Building
@@ -84,6 +87,7 @@ function Home() {
           </div>
         </div>
 
+        {/* Visual cue encouraging users to continue exploring the site. */}
         <div className="scroll-indicator">
           <span>EXPLORE</span>
           <div></div>

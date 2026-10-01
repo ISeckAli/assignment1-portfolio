@@ -5,6 +5,7 @@ function Navbar() {
   return (
     <header className="site-header">
       <nav className="navbar">
+        {/* Brand logo links back to the portfolio home page. */}
         <NavLink to="/" className="logo-link">
           <img
             src={logo}
@@ -13,6 +14,7 @@ function Navbar() {
           />
         </NavLink>
 
+        {/* Primary navigation for all portfolio sections. */}
         <div className="nav-links">
           <NavLink to="/">Home</NavLink>
           <NavLink to="/about">About</NavLink>

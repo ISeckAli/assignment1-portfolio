@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
+// Professional contact methods displayed beside the form.
 const contactMethods = [
   {
     label: 'EMAIL',
@@ -25,6 +26,7 @@ const contactMethods = [
 function Contact() {
   const navigate = useNavigate()
 
+  // Store all user-entered contact form data in one state object.
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -33,8 +35,10 @@ function Contact() {
     message: '',
   })
 
+  // Controls the confirmation message shown after submission.
   const [submitted, setSubmitted] = useState(false)
 
+  // Update the matching form field whenever the user enters information.
   const handleChange = (event) => {
     const { name, value } = event.target
 
@@ -44,6 +48,7 @@ function Contact() {
     }))
   }
 
+  // Capture the form data, show confirmation, then return to Home.
   const handleSubmit = (event) => {
     event.preventDefault()
 
@@ -60,6 +65,7 @@ function Contact() {
     <main>
       <section className="contact-section">
         <div className="contact-container">
+          {/* Page heading and invitation to connect. */}
           <div className="contact-heading">
             <p className="contact-label">CONNECT</p>
 
@@ -73,6 +79,7 @@ function Contact() {
 
           <div className="contact-layout">
             <div className="contact-information">
+              {/* Professional introduction beside the contact form. */}
               <div className="contact-intro-card">
                 <p className="contact-card-label">
                   START A CONVERSATION
@@ -90,6 +97,7 @@ function Contact() {
                 </p>
               </div>
 
+              {/* Render email and professional profile links from shared data. */}
               <div className="contact-methods">
                 {contactMethods.map((method, index) => (
                   <a
@@ -124,6 +132,7 @@ function Contact() {
                 ))}
               </div>
 
+              {/* Technical areas relevant to professional opportunities. */}
               <div className="contact-focus">
                 <p className="contact-card-label">
                   AREAS OF INTEREST
@@ -155,6 +164,7 @@ function Contact() {
                 </div>
               </div>
 
+              {/* Replace the form with a confirmation message after submission. */}
               {submitted ? (
                 <div
                   className="contact-success"
@@ -173,11 +183,10 @@ function Contact() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit}>
+                  {/* Basic visitor identification and contact information. */}
                   <div className="contact-form-row">
                     <div className="form-group">
-                      <label htmlFor="firstName">
-                        First Name
-                      </label>
+                      <label htmlFor="firstName">First Name</label>
 
                       <input
                         type="text"
@@ -192,9 +201,7 @@ function Contact() {
                     </div>
 
                     <div className="form-group">
-                      <label htmlFor="lastName">
-                        Last Name
-                      </label>
+                      <label htmlFor="lastName">Last Name</label>
 
                       <input
                         type="text"
@@ -228,9 +235,7 @@ function Contact() {
                     </div>
 
                     <div className="form-group">
-                      <label htmlFor="email">
-                        Email
-                      </label>
+                      <label htmlFor="email">Email</label>
 
                       <input
                         type="email"
@@ -245,10 +250,9 @@ function Contact() {
                     </div>
                   </div>
 
+                  {/* Main message field for the visitor's inquiry. */}
                   <div className="form-group">
-                    <label htmlFor="message">
-                      Message
-                    </label>
+                    <label htmlFor="message">Message</label>
 
                     <textarea
                       id="message"

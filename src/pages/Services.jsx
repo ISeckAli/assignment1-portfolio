@@ -1,3 +1,4 @@
+// Service data used to generate each engineering capability card.
 const services = [
   {
     number: '01',
@@ -26,7 +27,6 @@ const services = [
       'REST APIs',
     ],
   },
-
   {
     number: '02',
     title: 'Full-Stack Development',
@@ -54,7 +54,6 @@ const services = [
       'Render',
     ],
   },
-
   {
     number: '03',
     title: 'Backend & Systems Development',
@@ -82,7 +81,6 @@ const services = [
       'Maven',
     ],
   },
-
   {
     number: '04',
     title: 'AI & Machine Learning Engineering',
@@ -117,6 +115,7 @@ function Services() {
     <main>
       <section className="services-section">
         <div className="services-container">
+          {/* Page introduction and overall engineering focus. */}
           <div className="services-heading">
             <p className="services-label">
               ENGINEERING CAPABILITIES
@@ -131,6 +130,7 @@ function Services() {
             </p>
           </div>
 
+          {/* Overview connecting software engineering with AI development. */}
           <section className="services-intro-panel">
             <div>
               <p className="services-intro-label">
@@ -151,6 +151,7 @@ function Services() {
             </p>
           </section>
 
+          {/* Generate each service card from the shared services data. */}
           <div className="services-grid">
             {services.map((service) => (
               <article
@@ -175,6 +176,7 @@ function Services() {
 
                 <div className="service-divider"></div>
 
+                {/* Practical development capabilities for this service area. */}
                 <div className="service-capabilities">
                   <p>CAPABILITIES</p>
 
@@ -194,6 +196,7 @@ function Services() {
                   </div>
                 </div>
 
+                {/* Technologies commonly used within the service area. */}
                 <div className="service-stack">
                   <p>TECHNOLOGY</p>
 
@@ -209,6 +212,7 @@ function Services() {
             ))}
           </div>
 
+          {/* High-level workflow from initial design through deployment. */}
           <section className="engineering-spectrum">
             <div className="engineering-spectrum-heading">
               <p className="services-label">
@@ -224,9 +228,9 @@ function Services() {
               <div className="engineering-stage">
                 <span>01</span>
                 <strong>Design</strong>
+
                 <p>
-                  Requirements, architecture, data models, and system
-                  structure.
+                  Requirements, architecture, data models, and system structure.
                 </p>
               </div>
 
@@ -235,6 +239,7 @@ function Services() {
               <div className="engineering-stage">
                 <span>02</span>
                 <strong>Build</strong>
+
                 <p>
                   Front end, backend, APIs, databases, and application logic.
                 </p>
@@ -245,6 +250,7 @@ function Services() {
               <div className="engineering-stage">
                 <span>03</span>
                 <strong>Intelligence</strong>
+
                 <p>
                   Machine learning models and AI-powered application features.
                 </p>
@@ -255,9 +261,9 @@ function Services() {
               <div className="engineering-stage">
                 <span>04</span>
                 <strong>Validate</strong>
+
                 <p>
-                  Testing, evaluation, security, CI, and technical
-                  documentation.
+                  Testing, evaluation, security, CI, and technical documentation.
                 </p>
               </div>
 
@@ -266,9 +272,9 @@ function Services() {
               <div className="engineering-stage">
                 <span>05</span>
                 <strong>Deploy</strong>
+
                 <p>
-                  Production-ready services, APIs, applications, and cloud
-                  deployment.
+                  Production-ready services, APIs, applications, and cloud deployment.
                 </p>
               </div>
             </div>

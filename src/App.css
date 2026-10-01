@@ -1,10 +1,15 @@
 /* =========================================================
    GLOBAL PORTFOLIO STYLES
+   Main stylesheet for the portfolio application. Organizes shared
+   navigation, page layouts, interactive components, and responsive
+   behaviour across the complete React site.
    ========================================================= */
 
 
 /* =========================
    HEADER / NAVIGATION
+   Styles the persistent site header, custom logo, navigation links,
+   active-route state, and hover feedback used across all pages.
    ========================= */
 
 .site-header {
@@ -98,6 +103,7 @@
 
 /* =========================
    GENERAL
+   Shared structural rules used by the main page container.
    ========================= */
 
 main {
@@ -107,6 +113,8 @@ main {
 
 /* =========================================================
    HOME PAGE
+   Controls the landing-page grid, technical background treatment,
+   hero typography, spacing, and decorative lighting effects.
    ========================================================= */
 
 .home-section {
@@ -251,6 +259,8 @@ main {
 
 /* =========================
    SHARED BUTTONS
+   Reusable primary and secondary actions used throughout the portfolio,
+   including hover movement, borders, gradients, and focus presentation.
    ========================= */
 
 .primary-button,
@@ -316,6 +326,8 @@ main {
 
 /* =========================
    HOME TECH PANEL
+   Terminal-inspired summary panel used on the Home page to present
+   software engineering, full-stack, and AI focus areas.
    ========================= */
 
 .tech-panel {
@@ -494,6 +506,8 @@ main {
 
 /* =========================
    HOME EXPLORE
+   Decorative scroll indicator that encourages users to continue
+   exploring beyond the landing content.
    ========================= */
 
 .scroll-indicator {
@@ -533,6 +547,8 @@ main {
 
 /* =========================================================
    ABOUT PAGE
+   Defines the profile layout, portrait presentation, biography content,
+   technical highlights, and résumé call-to-action.
    ========================================================= */
 
 .about-section {
@@ -756,6 +772,8 @@ main {
 
 /* =========================================================
    PROJECTS PAGE
+   Controls project showcase cards, screenshots, metrics, technology tags,
+   role/outcome details, action links, alternating layouts, and hover states.
    ========================================================= */
 
 .projects-section {
@@ -1314,6 +1332,8 @@ main {
 
 /* =========================================================
    PROJECT MODAL
+   Full-screen project case-study overlay with controlled scrolling,
+   large screenshots, metrics, engineering details, and external links.
    ========================================================= */
 
 .project-modal-backdrop {
@@ -1698,6 +1718,8 @@ main {
 
 /* =========================================================
    EDUCATION PAGE
+   Styles the degree summary, academic metrics, completed/current courses,
+   advanced technical focus cards, and integrated co-op pathway.
    ========================================================= */
 
 .education-section {
@@ -2447,6 +2469,8 @@ main {
 
 /* =========================================================
    SERVICES PAGE
+   Presents engineering service areas, capability lists, technology stacks,
+   and the overall software-development workflow.
    ========================================================= */
 
 .services-section {
@@ -2909,6 +2933,8 @@ main {
 
 /* =========================
    ENGINEERING SPECTRUM
+   Visual workflow showing progression from system design and development
+   through intelligence, validation, and production deployment.
    ========================= */
 
 .engineering-spectrum {
@@ -3056,6 +3082,8 @@ main {
 
 /* =========================================================
    CONTACT PAGE
+   Defines the contact-page background, heading hierarchy, professional
+   contact information, messaging form, and submission confirmation state.
    ========================================================= */
 
 .contact-section {
@@ -3177,6 +3205,8 @@ main {
 
 /* =========================
    CONTACT LAYOUT
+   Two-column desktop structure that separates professional contact details
+   from the interactive message form.
    ========================= */
 
 .contact-layout {
@@ -3198,6 +3228,8 @@ main {
 
 /* =========================
    CONTACT INTRO
+   Introductory callout card used to frame the purpose of the contact page
+   and highlight availability for software and AI opportunities.
    ========================= */
 
 .contact-intro-card,
@@ -3301,6 +3333,8 @@ main {
 
 /* =========================
    CONTACT METHODS
+   Interactive email, LinkedIn, and GitHub cards with numbered labels,
+   hover feedback, and external-link actions.
    ========================= */
 
 .contact-methods {
@@ -3413,6 +3447,8 @@ main {
 
 /* =========================
    CONTACT FOCUS
+   Compact tags listing the technical areas most relevant to professional
+   opportunities and project discussions.
    ========================= */
 
 .contact-focus {
@@ -3449,6 +3485,8 @@ main {
 
 /* =========================
    CONTACT FORM PANEL
+   Container for the messaging interface, form heading, availability state,
+   and visual separation from the contact-information column.
    ========================= */
 
 .contact-form-panel {
@@ -3541,6 +3579,8 @@ main {
 
 /* =========================
    CONTACT FORM
+   Styles labels, required inputs, textarea, validation-ready controls,
+   submit action, and responsive field grouping.
    ========================= */
 
 .contact-form-panel form {
@@ -3678,6 +3718,8 @@ main {
 
 /* =========================
    CONTACT SUCCESS
+   Confirmation state displayed after form submission while the application
+   prepares to redirect the visitor back to the Home page.
    ========================= */
 
 .contact-success {
@@ -3761,6 +3803,7 @@ main {
 
 /* =========================
    FOOTER
+   Shared footer styling used consistently at the bottom of every route.
    ========================= */
 
 footer {
@@ -3778,8 +3821,11 @@ footer {
 
 /* =========================================================
    RESPONSIVE
+   Breakpoints progressively simplify grids, spacing, navigation, modals,
+   cards, and forms for laptop, tablet, and mobile screen widths.
    ========================================================= */
 
+/* Large tablet / compact desktop: collapse wide project layouts and reduce multi-column grids. */
 @media (max-width: 1100px) {
   .project-showcase,
   .project-reverse {
@@ -3811,6 +3857,7 @@ footer {
 }
 
 
+/* Tablet: move major two-column page sections into a single-column reading flow. */
 @media (max-width: 950px) {
   .home-content {
     grid-template-columns: 1fr;
@@ -3868,6 +3915,7 @@ footer {
 }
 
 
+/* Small tablet: stack navigation, tighten page spacing, and simplify dense content layouts. */
 @media (max-width: 850px) {
   .navbar {
     flex-direction: column;
@@ -3933,6 +3981,7 @@ footer {
 }
 
 
+/* Mobile: use single-column cards, full-width actions, compact spacing, and a full-screen project modal. */
 @media (max-width: 650px) {
   .hero-copy h1 {
     font-size: 3rem;
@@ -4083,6 +4132,7 @@ footer {
 }
 
 
+/* Accessibility: minimize animation and transition motion when requested by the user's system settings. */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

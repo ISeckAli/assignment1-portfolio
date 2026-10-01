@@ -4,6 +4,7 @@ import pyquestImage from '../assets/pyquest.png'
 import fraudImage from '../assets/fraud-detection.png'
 import miniRedisImage from '../assets/miniredis.png'
 
+// Central project data used by both the portfolio cards and detailed modal views.
 const projects = [
   {
     id: 'pyquest',
@@ -12,13 +13,11 @@ const projects = [
     type: 'FULL-STACK • AI • EDUCATION',
     image: pyquestImage,
     imageAlt: 'PyQuest Python learning platform live application',
-
     summary:
       'A gamified Python learning platform with browser-based code execution, adaptive learning, progress analytics, and an AI Coach designed to teach without giving away answers.',
 
     role:
       'Full-Stack Developer, Software Designer & AI Integration Developer',
-
     outcome:
       'Built a complete learning platform from the project requirements through deployment, including learner, instructor, and administrator experiences, AI-assisted coaching, analytics, security controls, testing, and CI.',
 
@@ -313,8 +312,13 @@ const projects = [
 ]
 
 function Projects() {
+  // Tracks the project currently opened in the detailed case-study modal.
   const [selectedProject, setSelectedProject] = useState(null)
 
+  /*
+   * Handles modal keyboard behaviour and page scrolling.
+   * Escape closes the modal and background scrolling is disabled while open.
+   */
   useEffect(() => {
     if (!selectedProject) {
       return undefined
@@ -331,16 +335,19 @@ function Projects() {
     document.body.style.overflow = 'hidden'
     window.addEventListener('keydown', handleEscape)
 
+    // Restore the previous page state when the modal closes.
     return () => {
       document.body.style.overflow = previousOverflow
       window.removeEventListener('keydown', handleEscape)
     }
   }, [selectedProject])
 
+  // Opens the case-study modal with the selected project data.
   const openProject = (project) => {
     setSelectedProject(project)
   }
 
+  // Clears the selected project and closes the modal.
   const closeProject = () => {
     setSelectedProject(null)
   }
@@ -348,6 +355,7 @@ function Projects() {
   return (
     <main>
       <section className="projects-section">
+        {/* Projects page introduction. */}
         <div className="projects-heading">
           <p className="projects-label">SELECTED ENGINEERING WORK</p>
 
@@ -360,6 +368,7 @@ function Projects() {
           </p>
         </div>
 
+        {/* Render each project from the shared project data structure. */}
         <div className="projects-list">
           {projects.map((project, index) => (
             <article
@@ -368,6 +377,7 @@ function Projects() {
               }`}
               key={project.id}
             >
+              {/* Project image also acts as a control for opening the modal. */}
               <button
                 type="button"
                 className="project-image-button"
@@ -383,12 +393,12 @@ function Projects() {
 
                   <div className="project-image-overlay">
                     <span className="project-image-icon">+</span>
-
                     <span>EXPAND PROJECT</span>
                   </div>
                 </div>
               </button>
 
+              {/* Main project summary, metrics, technology stack, and outcome. */}
               <div className="project-content">
                 <div className="project-number">{project.number}</div>
 
@@ -416,17 +426,16 @@ function Projects() {
                 <div className="project-details">
                   <div>
                     <span className="project-detail-label">ROLE</span>
-
                     <p>{project.role}</p>
                   </div>
 
                   <div>
                     <span className="project-detail-label">OUTCOME</span>
-
                     <p>{project.outcome}</p>
                   </div>
                 </div>
 
+                {/* Provide detailed case study and external project resources. */}
                 <div className="project-actions">
                   <button
                     type="button"
@@ -458,10 +467,12 @@ function Projects() {
         </div>
       </section>
 
+      {/* Detailed project case-study modal rendered only when a project is selected. */}
       {selectedProject && (
         <div
           className="project-modal-backdrop"
           onMouseDown={(event) => {
+            // Close only when the user clicks the backdrop, not the modal itself.
             if (event.target === event.currentTarget) {
               closeProject()
             }
@@ -473,6 +484,7 @@ function Projects() {
             aria-modal="true"
             aria-labelledby={`modal-${selectedProject.id}`}
           >
+            {/* Modal project identity and close control. */}
             <div className="project-modal-topbar">
               <div>
                 <span className="project-modal-number">
@@ -495,6 +507,7 @@ function Projects() {
             </div>
 
             <div className="project-modal-scroll">
+              {/* Larger project screenshot for the case-study view. */}
               <div className="project-modal-image-frame">
                 <img
                   src={selectedProject.image}
@@ -516,6 +529,7 @@ function Projects() {
                 </div>
               </div>
 
+              {/* Reuse the same project metrics shown on the main card. */}
               <div className="project-modal-metrics">
                 {selectedProject.metrics.map((metric) => (
                   <div key={metric.label}>
@@ -537,6 +551,7 @@ function Projects() {
                 </div>
               </div>
 
+              {/* Full technology stack for the selected project. */}
               <div className="project-modal-tech">
                 <p>TECHNOLOGY</p>
 
@@ -547,6 +562,7 @@ function Projects() {
                 </div>
               </div>
 
+              {/* Engineering case-study sections vary by project. */}
               <div className="project-case-study">
                 {selectedProject.details.map((section, sectionIndex) => (
                   <section
@@ -570,6 +586,7 @@ function Projects() {
                 ))}
               </div>
 
+              {/* External resources include demos, repositories, APIs, and reports. */}
               <div className="project-modal-links">
                 {selectedProject.links.map((link) => (
                   <a
